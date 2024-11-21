@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's The Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3f35e289da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="weather_box">
+        <div class="top">
+          <i class="fa-solid fa-location-dot" style="color: #000000"></i>
+          <input
+            type="text"
+            name=""
+            id="search"
+            placeholder="Enter Your Location"
+          />
+          <i
+            id="maglass"
+            class="fa-solid fa-magnifying-glass maglas"
+            style="color: #fff"
+          ></i>
+        </div>
+
+        <div class="not_found">
+          <img src="404.png" alt="" />
+          <p>Oops! Invalid Location :/</p>
+        </div>
+
+        <div class="middle">
+          <img src="" alt="" id="temp_img" draggable="false" />
+          <h1 id="temprature" class="middle_text middle_temprature"></h1>
+          <p id="weather_des" class="middle_text middle_description"></p>
+        </div>
+
+        <div class="bottom">
+          <div class="bottom__humidity">
+            <i class="fa-solid fa-water" style="color: #000000"></i>
+            <div class="bottom_text">
+              <p id="humidity" class="bottom__answer bottom_humidity"></p>
+              <p class="bottom_text">Humidity</p>
+            </div>
+          </div>
+          <div class="bottom__wind">
+            <i class="fa-solid fa-wind" style="color: #000000"></i>
+            <div class="bottom_text">
+              <p id="wind" class="bottom__answer bottom_wind"></p>
+              <p class="bottom_text">Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js" defer></script>
+  </body>
+</html>
