@@ -4,7 +4,7 @@ const middle = document.querySelector(".middle");
 const bottom = document.querySelector(".bottom");
 const error = document.querySelector(".not_found");
 
-search.addEventListener("click", () => {
+let handleSearch = () => {
   const APIKEY = `09e469b06d5e3c1afc70e52c16ec3823`;
   const city = document.getElementById("search").value;
 
@@ -69,4 +69,12 @@ search.addEventListener("click", () => {
       bottom.classList.add("fadeIn");
       box.style.height = "490px";
     });
+};
+
+search.addEventListener("click", handleSearch);
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleSearch();
+  }
 });
